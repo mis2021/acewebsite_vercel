@@ -68,6 +68,9 @@ body {
 
 /* CUSTOMIZED */
 
+.gmap_canvas {overflow:hidden;background:none!important;height:483px;width:915px;}
+.mapouter{position:relative;text-align:right;height:483px;width:915px;}
+
 .nav-bg-green-grad{
   background: #159957;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
