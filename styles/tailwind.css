@@ -2628,6 +2628,9 @@ select {
 .mt-48 {
   margin-top: 12rem;
 }
+.mr-7 {
+  margin-right: 7rem;
+}
 
 .mr-auto {
   margin-right: auto;

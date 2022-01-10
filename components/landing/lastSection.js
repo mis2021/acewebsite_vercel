@@ -26,7 +26,7 @@ export default function LastSection(props) {
 
                 <div className="container mx-auto">
                     <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-64   relative z-10">
-                    {/* <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-64 py-16  relative z-10"> */}
+                          {/* <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-64 py-16  relative z-10"> */}
                         <div className="w-full text-center ">
                          <iframe width="100%" className='rounded-lg' height="500px" id="gmap_canvas" src="https://maps.google.com/maps?q=Ace&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                         </div>
