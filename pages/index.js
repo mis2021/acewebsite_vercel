@@ -12,6 +12,7 @@ import LandingServices from "../components/landing/services";
 import Polygon from "components/Layouts/polygon";
 import DoctorSummary from "components/landing/doctors";
 import LastSection from "components/landing/lastSection";
+import Footer from "components/FooterTemp/Footer";
 
 export default function Index({ nodesAbout, preview, nodeFeatured, nodeGallery, ...props }) {
 
@@ -100,6 +101,8 @@ export default function Index({ nodesAbout, preview, nodeFeatured, nodeGallery, 
 
                 <DoctorSummary doctors={props?.nodeDoctors} />
                 <LastSection />
+                <Footer/>
+                
 
             </MainLayout>
 
