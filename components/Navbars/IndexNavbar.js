@@ -179,7 +179,7 @@ export default function Navbar(props) {
             <DropdownMenu title="Services and Facilities" icon="fas fa-stethoscope" menus={servicesFacilities} />
             <DropdownMenu title="Accredited Doctors" icon="fas fa-user-md" menus={doctors} />
             <DropdownMenu title="Patients and Visitors Guide" icon="fas fa-hospital-user" menus={patients} />
-            <NavbarLinks title="News and Events" icon="fas fa-newspaper" />
+            <NavbarLinks title="News and Events" icon="fas fa-newspaper" link={'/news-events'}/>
 
 
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
