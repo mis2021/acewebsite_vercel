@@ -13,6 +13,7 @@ import Polygon from "components/Layouts/polygon";
 import DoctorSummary from "components/landing/doctors";
 import LastSection from "components/landing/lastSection";
 import Footer from "components/FooterTemp/Footer";
+import Script from 'next/script'
 
 export default function Index({ nodesAbout, preview, nodeFeatured, nodeGallery, ...props }) {
 
@@ -87,7 +88,8 @@ export default function Index({ nodesAbout, preview, nodeFeatured, nodeGallery, 
 
     return (
         <>
-            <MainLayout>
+            {/* <script src="../path/to/tw-elements/dist/js/index.min.js"></script> */}
+            <MainLayout type="index">
                 <LandingHeader />
 
                 <section className="mt-48 md:mt-40 pb-0 relative bg-blueGray-100">
@@ -101,8 +103,8 @@ export default function Index({ nodesAbout, preview, nodeFeatured, nodeGallery, 
 
                 <DoctorSummary doctors={props?.nodeDoctors} />
                 <LastSection />
-                <Footer/>
-                
+                <Footer />
+
 
             </MainLayout>
 

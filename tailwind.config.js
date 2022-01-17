@@ -1,5 +1,6 @@
 module.exports = {
   mode: 'jit',
+  // purge: ['./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js'],
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -35,5 +36,8 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  // content: ['./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js'],
+  // plugins: [
+  //   require('tw-elements/dist/plugin')
+  // ],
 }

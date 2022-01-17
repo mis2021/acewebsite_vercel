@@ -2,147 +2,11 @@ import React from "react";
 import Link from "next/link";
 import NavbarLinks from "./NavLinks";
 import DropdownMenu from "components/Dropdowns/DropdownMenu";
-// components
-
 import IndexDropdown from "components/Dropdowns/IndexDropdown.js";
+import { aboutUsMenu, servicesFacilities, doctors, patients } from "constants/navbarmenu";
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-
-
-  const aboutUsMenu = [
-    {
-      category: null,
-      submenus: [
-        {
-          name: 'Ace history',
-          link: '/about/history'
-        },
-        {
-          name: 'VMGC',
-          link: '/about/vmgc'
-        }
-
-      ]
-    }
-  ]
-
-  const servicesFacilities = [
-    {
-      category: null,
-      submenus: [
-        {
-          name: 'All Services',
-          link: '/services'
-        },
-        {
-          name: 'Facilities',
-          link: '/facilities'
-        }
-
-      ]
-    }
-  ]
-
-  const doctors = [
-    {
-      category: null,
-      submenus: [
-        {
-          name: 'Founder’s names with clinic’s schedules',
-          link: '/doctors/schedules'
-        }
-
-      ]
-    }
-  ]
-
-  const patients = [
-    {
-      category: null,
-      submenus: [
-        {
-          name: 'General Rules',
-          link: '/patients/general-rules',
-          type: 'single'
-        }
-
-      ]
-    },
-    {
-      category: "Admission",
-      submenus: [
-        {
-          name: 'Pre-admission',
-          link: '/patients/admission/pre-admission'
-        },
-        {
-          name: 'Preferred Room',
-          link: '/patients/admission/preferred-room'
-        },
-        {
-          name: 'Room Transfer/ Room Reservations',
-          link: '/patients/admission/room-transfer-reservation'
-        },
-        {
-          name: 'Dietary Services',
-          link: '/patients/admission/dietary-services'
-        },
-        {
-          name: 'Patient’s Discharge',
-          link: '/patients/admission/patient-discharge'
-        },
-
-      ]
-    },
-    {
-      category: "Billing",
-      submenus: [
-        {
-          name: 'Senior Citizen, Philhealth, HMO and other Discount Benefits',
-          link: '/patients/billing/discounts'
-        },
-        {
-          name: 'Philhealth Reminders',
-          link: '/patients/billing/phic-reminders'
-        },
-        {
-          name: 'Affiliated HMO',
-          link: '/patients/billing/affiliated-hmo'
-        }
-
-      ]
-    },
-    {
-      category: "Visitor Reference",
-      submenus: [
-        {
-          name: 'Visiting Hours Regulation',
-          link: '/patients/visitors/visiting-hours-regulations'
-        },
-        {
-          name: 'Safety and Security Guidelines',
-          link: '/patients/visitors/safety-security-guidelines'
-        },
-        {
-          name: 'Reminders',
-          link: '/patients/visitors/reminders'
-        }
-
-      ]
-    },{
-      category: null,
-      submenus: [
-        {
-          name: 'Patient’s Rights',
-          link: '/patients/rights',
-          type: 'single'
-        }
-
-      ]
-    }
-  ]
-
 
   return (
     <>
@@ -154,9 +18,9 @@ export default function Navbar(props) {
               <a
                 className="text-white-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
                 // className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
-                href="#pablo"
+                
               >
-                ACEMC-BOHOL
+                ACEMC-BOHOL index
               </a>
             </Link>
             <button
@@ -169,7 +33,7 @@ export default function Navbar(props) {
           </div>
           <div
             className={
-              "lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none " +
+              "lg:flex flex-grow items-center  lg:bg-opacity-0 lg:shadow-none " +
               (navbarOpen ? " block" : " hidden")
             }
             id="example-navbar-warning"
