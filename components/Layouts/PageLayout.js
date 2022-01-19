@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
+
+
 export default function PageLayout(props) {
 
     return (
@@ -14,6 +16,7 @@ export default function PageLayout(props) {
                     <div className="flex flex-wrap items-center">
                         {props.children}
                     </div>
+                
                 </div>
             </div>
 
