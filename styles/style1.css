@@ -1,0 +1,14 @@
+.list-unstyled{
+    list-style: none !important;
+}
+
+.bt-0{
+    bottom: 0;
+}
+
+.sec-padding{
+    padding-left: 12%;
+    padding-right: 10%;
+    /* padding-top: 5%; */
+    padding-bottom: 5%;
+}

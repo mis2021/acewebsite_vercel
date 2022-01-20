@@ -13,7 +13,7 @@ export default function PageLayout(props) {
             <div>
             {/* <div className="pt-7r"> */}
                 <div className="mx-5">
-                    <div className="flex flex-wrap items-center">
+                    <div className="flex flex-wrap items-center" >
                         {props.children}
                     </div>
                 

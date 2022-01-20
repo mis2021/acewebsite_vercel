@@ -40,8 +40,9 @@ export default function PageNavbar(props) {
           >
 
             <DropdownMenu title="About Us" icon="fas fa-file-alt" menus={aboutUsMenu} />
-            <DropdownMenu title="Services and Facilities" icon="fas fa-stethoscope" menus={servicesFacilities} />
-            <DropdownMenu title="Accredited Doctors" icon="fas fa-user-md" menus={doctors} />
+            {/* <DropdownMenu title="Services and Facilities" icon="fas fa-stethoscope" menus={servicesFacilities} /> */}
+            <NavbarLinks title="Services" icon="fas fa-newspaper" link={'/services'} />
+            <NavbarLinks title="Doctors" icon="fas fa-newspaper" link={'/doctors'} />
             <DropdownMenu title="Patients and Visitors Guide" icon="fas fa-hospital-user" menus={patients} />
             <NavbarLinks title="News and Events" icon="fas fa-newspaper" link={'/news-events'} />
 
