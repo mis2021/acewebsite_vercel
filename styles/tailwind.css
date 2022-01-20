@@ -1,3 +1,4 @@
+@import url("style1.css");
 /*! tailwindcss v2.0.4 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -67,6 +68,18 @@ body {
 }
 
 /* CUSTOMIZED */
+
+.pt-7r {
+  padding-top: 7rem;
+}
+
+.mx-5 {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.gmap_canvas {overflow:hidden;background:none!important;height:483px;width:915px;}
+.mapouter{position:relative;text-align:right;height:483px;width:915px;}
 
 .nav-bg-green-grad{
   background: #159957;  /* fallback for old browsers */
@@ -535,7 +548,8 @@ fieldset {
 
 ol,
 ul {
-  list-style: none;
+  list-style: visible !important;
+
   margin: 0;
   padding: 0;
 }
@@ -927,6 +941,8 @@ select {
 .container {
   width: 100%;
 }
+
+
 
 @media (min-width: 640px) {
   .container {
@@ -2623,6 +2639,9 @@ select {
 .mt-48 {
   margin-top: 12rem;
 }
+.mr-7 {
+  margin-right: 7rem;
+}
 
 .mr-auto {
   margin-right: auto;
@@ -3047,7 +3066,7 @@ select {
 }
 
 .pl-4 {
-  padding-left: 1rem;
+  padding-left: 1rem !important;
 }
 
 .pt-6 {
