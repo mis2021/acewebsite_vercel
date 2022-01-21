@@ -39,7 +39,8 @@ export default function Navbar(props) {
             id="example-navbar-warning"
           >
 
-            <DropdownMenu title="About Us" icon="fas fa-file-alt" menus={aboutUsMenu} />
+            {/* <DropdownMenu title="About Us" icon="fas fa-file-alt" menus={aboutUsMenu} /> */}
+            <NavbarLinks title="About" icon="fas fa-hospital-alt" link={'/about'} />
             <DropdownMenu title="Services and Facilities" icon="fas fa-stethoscope" menus={servicesFacilities} />
             <DropdownMenu title="Accredited Doctors" icon="fas fa-user-md" menus={doctors} />
             <DropdownMenu title="Patients and Visitors Guide" icon="fas fa-hospital-user" menus={patients} />

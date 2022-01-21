@@ -4411,3 +4411,22 @@ select {
 
 @media (min-width: 1536px) {
 }
+
+
+.gradient-custom {
+  background: rgb(37, 117, 252, 1);
+  background: -webkit-linear-gradient(315deg, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+  background: linear-gradient(315deg, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+}
+.gradient-custom-2 {
+  background: rgb(68, 75, 119);
+  background: -webkit-linear-gradient(315deg, rgba(20, 24, 43, 1), rgba(68, 75, 119, 1));
+  background: linear-gradient(315deg, rgba(20, 24, 43, 1), rgba(68, 75, 119, 1));
+}
+
+.-skew-x-12 {
+  transform: skewX(-12deg);
+}
+.skew-x-12 {
+  transform: skewX(12deg);
+}
