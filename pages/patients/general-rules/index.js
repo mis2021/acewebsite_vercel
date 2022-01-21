@@ -7,19 +7,16 @@ import Parser from "html-react-parser";
 import PageHeaderLayout from "components/Layouts/PageHeaderLayout";
 import PageCard from "components/Cards/PageCard";
 import Footer from "components/FooterTemp/Footer";
+import PagehaderLayoutv2 from "components/Layouts/PagehaderLayoutv2";
 
 export default function GeneralRules({ nodesGeneral }) {
-  //   const generalrules = nodesGeneral?.find(
-  //     (e) => e.slug == "general-guidelines"
-  //   );
-
-  //   console.log("generalrules", nodesGeneral);
-
   return (
     <>
       <MainLayout>
-        <PageHeaderLayout />
+        {/* <PageHeaderLayout /> */}
+
         <PageLayout>
+          <PagehaderLayoutv2 />
           {/* <h5 class="text-xl font-medium leading-tight mt-0 mb-2 text-blue-600">
             HOSPITAL RULES AND REGULATIONS
           </h5> */}
