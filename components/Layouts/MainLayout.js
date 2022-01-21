@@ -7,17 +7,24 @@ export default function MainLayout(props) {
 
     return (
         <>
-           
-           
-           {
-               props.type == "index" ? <IndexNavbar fixed /> : <PageNavbar />
-           }
-         
 
-            {props.children}
+            <div style={{ height: '100%' }}>
 
-          
+
+                {
+                    props.type == "index" ? <IndexNavbar fixed /> : <PageNavbar />
+                }
+
+
+                {props.children}
+
+                {
+                    props.type == "index" ? <Footer /> : <></>
+                }
+                
+
+            </div>
         </>
-        
+
     )
 }

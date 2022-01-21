@@ -103,7 +103,7 @@ export default function Index({ nodesAbout, preview, nodeFeatured, nodeGallery, 
 
                 <DoctorSummary doctors={props?.nodeDoctors} />
                 <LastSection />
-                <Footer />
+                {/* <Footer /> */}
 
 
             </MainLayout>

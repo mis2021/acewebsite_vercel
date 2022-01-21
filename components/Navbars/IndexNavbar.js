@@ -18,9 +18,9 @@ export default function Navbar(props) {
               <a
                 className="text-white-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
                 // className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
-                
+                href="#"
               >
-                ACEMC-BOHOL index
+                ACEMC-BOHOL
               </a>
             </Link>
             <button
@@ -39,10 +39,10 @@ export default function Navbar(props) {
             id="example-navbar-warning"
           >
 
-            {/* <DropdownMenu title="About Us" icon="fas fa-file-alt" menus={aboutUsMenu} /> */}
+
             <NavbarLinks title="About" icon="fas fa-hospital-alt" link={'/about'} />
-            <DropdownMenu title="Services and Facilities" icon="fas fa-stethoscope" menus={servicesFacilities} />
-            <DropdownMenu title="Accredited Doctors" icon="fas fa-user-md" menus={doctors} />
+            <NavbarLinks title="Services" icon="fas fa-newspaper" link={'/services'} />
+            <NavbarLinks title="Doctors" icon="fas fa-newspaper" link={'/doctors'} />
             <DropdownMenu title="Patients and Visitors Guide" icon="fas fa-hospital-user" menus={patients} />
             <NavbarLinks title="News and Events" icon="fas fa-newspaper" link={'/news-events'}/>
 

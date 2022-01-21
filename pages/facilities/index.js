@@ -7,7 +7,7 @@ export default function Facilities(props) {
         <>
             <MainLayout>
                 <PageLayout>
-                Facilities here
+                    
                 </PageLayout>
             </MainLayout>
 
