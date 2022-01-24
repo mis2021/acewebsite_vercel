@@ -3,7 +3,9 @@ import React from "react";
 export default function PagehaderLayoutv2(props) {
   return (
     <>
-      <div class="container xl:max-w-6xl lg:max-w-5xl my-12 py-12 mx-auto">
+      <div class="container xl:max-w-6xl lg:max-w-5xl my-12 py-12 mx-auto"   style={{
+          paddingBottom:5
+          }}>
         <section class="mb-20">
           <div
             class="relative overflow-hidden flex items-center bg-cover p-0"
@@ -24,12 +26,12 @@ export default function PagehaderLayoutv2(props) {
                     ALLIED CARE EXPERTS MEDICAL CENTER
                   </h2>
                   <h2 class="text-6xl font-extrabold tracking-tight text-blue-600 mb-6">
-                    BOHOL
+                    NEWS AND EVENTS
                   </h2>
                   {/* <p class="lg:pr-12 lg:mr-12 text-xl font-normal text-gray-500 mt-1 mb-4">
                         KASALIGAN MO!
                       </p> */}
-                  <div>
+                  {/* <div>
                     <button
                       type="button"
                       class="px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-300 ease-in-out mt-6 mr-2"
@@ -42,7 +44,7 @@ export default function PagehaderLayoutv2(props) {
                     >
                       See Demo
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

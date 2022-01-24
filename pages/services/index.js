@@ -88,9 +88,6 @@ export default function Services(props) {
                         </div>
                     </section>
                 </div>
-
-
-
                 <PageLayout>
                 </PageLayout>
             </MainLayout>
