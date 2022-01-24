@@ -27,30 +27,15 @@ export default function NewsEvents(props) {
           <div className="bg-blueGray-200 sec-padding">
             <section className=" pb-0 relative bg-blueGray-200 ">
               <div className="container px-4 mx-auto">
-               
-                  <Stack direction="row" spacing={2} alignItems="center">
-                    <CardExpand
-                      description="this is the description"
-                      image="/img/pattern_nextjs.png"
-                    />
-                    <CardExpand
-                      description="this is the description"
-                      image="/img/pattern_nextjs.png"
-                    />
-                    <CardExpand
-                      description="this is the description"
-                      image="/img/pattern_nextjs.png"
-                    />
-                    <CardExpand
-                      description="this is the description"
-                      image="/img/pattern_nextjs.png"
-                    />
-                     <CardExpand
-                      description="this is the description"
-                      image="/img/pattern_nextjs.png"
-                    />
-                  </Stack>
-              
+                <div className="flex flex-wrap">
+                  <div className="w-1/3 px-4">
+                    <CardExpand 
+                    image= "/img/pattern_nextjs.png"
+                    title="Sample Title"
+                    content="aaaaaa"
+                    description="asdsadasdasa" />
+                  </div>
+                </div>
               </div>
             </section>
           </div>
