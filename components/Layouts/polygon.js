@@ -4,7 +4,7 @@ export default function Polygon(props) {
     return (
         <>
             <div
-                className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
+                className={props.divClassName ? props.divClassName : "-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"}
                 style={{ transform: "translateZ(0)" }}
             >
                 <svg
