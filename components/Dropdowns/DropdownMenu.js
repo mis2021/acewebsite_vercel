@@ -17,7 +17,7 @@ const DropdownMenu = (props) => {
         setDropdownPopoverShow(false);
     };
     const menu = props.menus;
-    console.log("menus", menu)
+   
     return (
         <>
             <div

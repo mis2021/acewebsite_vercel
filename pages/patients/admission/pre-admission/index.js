@@ -7,7 +7,7 @@ import PageCard from "components/Cards/PageCard";
 import Parser from "html-react-parser";
 
 export default function PreAdmission({ nodeAdmGuide }) {
-//   console.log(nodeAdmGuide);
+
 
   return (
     <>

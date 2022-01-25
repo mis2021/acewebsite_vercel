@@ -5,20 +5,17 @@ import ImageCubes from "components/Contents/ImageCubes";
 import {  isBrowser, isMobile } from 'react-device-detect';
 
 export default function LandingServices(props) {
-    console.log("isMobile", isMobile)
-    console.log("isBrowser", isBrowser)
+   
 
 
     const intDesc = props?.initialDesc[0];
     const services = props?.services;
 
-    console.log("services length", services.length)
 
     const srLength = services.length;
     const srl_cut = parseInt(services.length / 2) - 1;
 
 
-    console.log("srl_cut", srl_cut)
 
     var srvb_1 = []
     var srvb_2 = []
@@ -26,11 +23,11 @@ export default function LandingServices(props) {
     services.map((p, index) => {
 
         if (index >= 0 && index <= srl_cut) {
-            console.log("index1", index)
+           
             srvb_1.push(p)
         }
         else {
-            console.log("index2", index)
+           
             srvb_2.push(p)
         }
     })
