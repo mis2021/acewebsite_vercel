@@ -1,10 +1,11 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <>
-      <footer className="relative bg-blueGray-200 pt-8 bt-0 " > 
-      {/* <footer className="relative bg-blueGray-200 pt-8 pb-6"> */}
+      <footer className="relative bg-blueGray-200 pt-8 bt-0 " >
+        {/* <footer className="relative bg-blueGray-200 pt-8 pb-6"> */}
         <div
           className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
           style={{ transform: "translateZ(0)" }}
@@ -32,37 +33,75 @@ export default function Footer() {
                 Find us on any of these platforms.
               </h5>
               <div className="mt-6 lg:mb-0 mb-6">
-               
-                <button
-                  className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
+                <a
+                 
+                  // className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  href="https://www.facebook.com/acebohol/"
+                  target="_blank"
                 >
-                  <i className="fab fa-facebook-square"></i>
-                </button>
-               
-                
+                  <button
+                    className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                    type="button"
+                  >
+                    <i className="fab fa-facebook-square"></i>
+                  </button>
+                </a>
+
               </div>
             </div>
             <div className="w-full lg:w-6/12 px-4">
               <div className="flex flex-wrap items-top mb-6">
                 <div className="w-full lg:w-4/12 px-4 ml-auto">
                   <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
-                    Useful Links
+                    Menu
                   </span>
                   <ul className="list-unstyled">
                     <li>
-                      <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="https://www.creative-tim.com/presentation?ref=nnjs-footer"
-                      >
-                        About Us
-                      </a>
+                      <Link href="/about">
+                        <a
+                          className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                          href="#"
+                        >
+                          About Us
+                        </a>
+                      </Link>
                     </li>
-                    
-                    
+                    <li>
+                      <Link href="/services">
+                        <a
+                          className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                          href="#"
+                        >
+                          Services
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/doctors">
+                        <a
+                          className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                          href="#"
+                        >
+                          Doctors
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/news-events">
+                        <a
+                          className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                          href="#"
+                        >
+                          News and Events
+                        </a>
+                      </Link>
+                    </li>
+
+
+
                   </ul>
                 </div>
-                <div className="w-full lg:w-4/12 px-4">
+                {/* <div className="w-full lg:w-4/12 px-4">
                   <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
                     Other Resources
                   </span>
@@ -76,7 +115,7 @@ export default function Footer() {
                       </a>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -85,7 +124,7 @@ export default function Footer() {
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-blueGray-500 font-semibold py-1">
                 Copyright © {new Date().getFullYear()} Allied Care Experts Medical Center - Bohol
-                
+
                 .
               </div>
             </div>

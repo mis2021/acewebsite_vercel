@@ -43,7 +43,7 @@ function Slide({
   const distanceFactor = 1 - Math.abs(offsetFromMiddle / (offsetRadius + 1));
 
   const offsetCardClick = i => {
-    console.log(i);
+    // console.log(i);
   };
 
   const translateYoffset =

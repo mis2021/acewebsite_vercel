@@ -25,7 +25,7 @@ export default function VMGC({ nodesAbout }) {
   );
   const history = nodesAbout?.find((e) => e.slug == "history");
 
-  console.log("about", about);
+
 
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
@@ -40,7 +40,7 @@ export default function VMGC({ nodesAbout }) {
       setPageNumber(type == "prev" ? pageNumber - 1 : pageNumber + 1);
     }
 
-    console.log("type", type)
+   
   }
 
 

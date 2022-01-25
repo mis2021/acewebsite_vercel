@@ -3,7 +3,7 @@ import Link from "next/link";
 import Parser from 'html-react-parser';
 
 export default function ImageCubes(props) {
-    console.log(props.image)
+   
     return (
         <>
             
