@@ -2,7 +2,7 @@ import React from 'react';
 import PersonDesc from 'components/Contents/PersonDesc';
 
 export default function DoctorSummary(props) {
-    console.log("all doctors", props.doctors)
+   
 
     const doctors = props?.doctors || {}
     return (
