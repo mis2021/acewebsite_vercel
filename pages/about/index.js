@@ -6,7 +6,6 @@ import Parser from "html-react-parser";
 import { urlObjectKeys } from "next/dist/shared/lib/utils";
 import PageHeaderLayout from "components/Layouts/PageHeaderLayout";
 import CardAbout from "./CardAbout";
-import { aboutUsMenu } from "constants/navbarmenu";
 import { Document, Page } from 'react-pdf';
 import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
 import * as pdfjs from 'pdfjs-dist'
