@@ -113,7 +113,8 @@ export default function Index({ nodesAbout, preview, nodeFeatured, nodeGallery, 
     )
 }
 
-export async function getStaticProps({ preview = false }) {
+// export async function getStaticProps({ preview = false }) {
+export async function getServerSideProps({ preview = false }) {
 
     const PostAbout = await getPostByCategory("about, vmgc")
     const PostFeatured = await getPostByCategory("featured")

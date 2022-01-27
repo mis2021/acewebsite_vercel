@@ -77,7 +77,7 @@ export default function GeneralRules({ nodesGeneral }) {
   );
 }
 
-export async function getStaticProps({ preview = false }) {
+export async function getServerSideProps({ preview = false }) {
   const GeneralRules = await getPostByCategory("general_rules");
 
   const nodesGeneral = [];

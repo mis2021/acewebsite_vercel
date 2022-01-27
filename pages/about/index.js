@@ -237,7 +237,7 @@ export default function VMGC({ nodesAbout }) {
   );
 }
 
-export async function getStaticProps({ preview = false }) {
+export async function getServerSideProps({ preview = false }) {
   const PostAbout = await getPostByCategory("about, vmgc");
 
   const nodesAbout = [];
