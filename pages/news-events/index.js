@@ -50,7 +50,7 @@ export default function NewsEvents(props) {
   );
 }
 
-export async function getStaticProps({ preview = false }) {
+export async function getServerSideProps({ preview = false }) {
   const PostNewsAndEvent = await getPostByCategory("service");
 
   const NodeNewsAndEvent = [];
