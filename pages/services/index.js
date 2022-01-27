@@ -52,7 +52,7 @@ export default function Services(props) {
     )
 }
 
-export async function getStaticProps({ preview = false }) {
+export async function getServerSideProps({ preview = false }) {
 
 
     const PostServices = await getPostByCategory("service")

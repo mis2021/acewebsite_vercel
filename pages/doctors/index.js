@@ -62,7 +62,7 @@ export default function DoctorsSched(props) {
     )
 }
 
-export async function getStaticProps({ preview = false }) {
+export async function getServerSideProps({ preview = false }) {
 
     const PostDoctors = await getPostByCategory("doctor")
 

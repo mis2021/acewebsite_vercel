@@ -22,7 +22,7 @@ export default function PreAdmission({ nodeAdmGuide }) {
   );
 }
 
-export async function getStaticProps({ preview = false }) {
+export async function getServerSideProps({ preview = false }) {
   const AdmGuide = await getPostByCategory("admission_guide");
 
   const nodeAdmGuide = [];

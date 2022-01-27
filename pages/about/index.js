@@ -6,7 +6,6 @@ import Parser from "html-react-parser";
 import { urlObjectKeys } from "next/dist/shared/lib/utils";
 import PageHeaderLayout from "components/Layouts/PageHeaderLayout";
 import CardAbout from "./CardAbout";
-import { aboutUsMenu } from "constants/navbarmenu";
 import { Document, Page } from 'react-pdf';
 import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
 import * as pdfjs from 'pdfjs-dist'
@@ -206,6 +205,7 @@ export default function VMGC({ nodesAbout }) {
               <b style={{ fontSize: '25px'}}>Simplified Registration Statement For Hospitals</b> <br/>
               <div className="shadow-md" style={{width: '40%'}}>
                 <Document
+                  // file={{url:"http://admin.acemcbohol.ph/wp-content/uploads/2022/01/AMENDED-PREL-SRS-ACEMC-BOHOL-5.15-1.pdf"}}
                   // file="http://admin.acemcbohol.ph/wp-content/uploads/2022/01/AMENDED-PREL-SRS-ACEMC-BOHOL-5.15-1.pdf"
                   file="/files/AMENDED-PREL-SRS-ACEMC-BOHOL-5-15-1.pdf"
                   onLoadSuccess={onDocumentLoadSuccess}
@@ -238,7 +238,7 @@ export default function VMGC({ nodesAbout }) {
   );
 }
 
-export async function getStaticProps({ preview = false }) {
+export async function getServerSideProps({ preview = false }) {
   const PostAbout = await getPostByCategory("about, vmgc");
 
   const nodesAbout = [];
