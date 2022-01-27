@@ -39,7 +39,7 @@ export default function CardExpand(props) {
   };
 
   return (
-    <Card sx={{ maxWidth: 345, marginTop: '20px', maxHeight: 550, height: 500 }}>
+    <Card sx={ { maxWidth: 345, marginTop: '20px', maxHeight: 550, height: 500 }} style={{marginTop:20}}>
       <CardHeader
         avatar={
           props.icon ?

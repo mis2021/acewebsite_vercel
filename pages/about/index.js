@@ -205,6 +205,7 @@ export default function VMGC({ nodesAbout }) {
               <b style={{ fontSize: '25px'}}>Simplified Registration Statement For Hospitals</b> <br/>
               <div className="shadow-md" style={{width: '40%'}}>
                 <Document
+                  // file={{url:"http://admin.acemcbohol.ph/wp-content/uploads/2022/01/AMENDED-PREL-SRS-ACEMC-BOHOL-5.15-1.pdf"}}
                   // file="http://admin.acemcbohol.ph/wp-content/uploads/2022/01/AMENDED-PREL-SRS-ACEMC-BOHOL-5.15-1.pdf"
                   file="/files/AMENDED-PREL-SRS-ACEMC-BOHOL-5-15-1.pdf"
                   onLoadSuccess={onDocumentLoadSuccess}
