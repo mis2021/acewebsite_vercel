@@ -43,9 +43,6 @@ export default function Services(props) {
                     </div>
                     {/* </div> */}
                 </div>
-
-
-
                 <PageLayout>
                 </PageLayout>
             </MainLayout>
