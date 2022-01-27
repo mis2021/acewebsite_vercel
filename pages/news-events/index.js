@@ -3,44 +3,63 @@ import MainLayout from "components/Layouts/MainLayout";
 import PageLayout from "components/Layouts/PageLayout";
 import PagehaderLayoutv2 from "components/Layouts/PagehaderLayoutv2";
 import CardExpand from "components/Cards/CardExpand";
+import { getPostByCategory } from "lib/api";
 import AceContainer from "components/Containers/AceContainer";
 import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import Footer from "components/FooterTemp/Footer";
 
-// import 'tw-elements';
-
-const Item = styled(Paper)(({ theme }) => ({
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
-
 export default function NewsEvents(props) {
+  const news = props?.NodeNewsAndEvent;
+
+  // console.log(news)
+
   return (
     <>
       <MainLayout>
         <PageLayout>
-          <PagehaderLayoutv2 />
-          <div className="bg-blueGray-200 sec-padding">
-            <section className=" pb-0 relative bg-blueGray-200 ">
-              <div className="container px-4 mx-auto">
-                <div className="flex flex-wrap">
-                  <div className="w-1/3 px-4">
-                    <CardExpand 
-                    image= "/img/pattern_nextjs.png"
-                    title="Sample Title"
-                    content="aaaaaa"
-                    description="asdsadasdasa" />
+          <PagehaderLayoutv2 image={news} />
+          
+          <div className="   mr-auto ml-auto -mt-12">
+            {/* <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg "> */}
+            <div className="bg-blueGray-200 sec-padding">
+              <section className=" pb-0 relative ">
+                {/* <div className="container px-4 mx-auto"> */}
+                <div className="container  mx-auto">
+                  <div className="flex flex-wrap">
+                    {news.map((p, index) => (
+                      <div className="w-1/3 px-4">
+                        <CardExpand
+                          image={p?.featuredImage?.node?.sourceUrl}
+                          title={p.title}
+                          description={p.excerpt}
+                          content={p?.content}
+                          icon={p?.image?.iconimage?.sourceUrl}
+                        />
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </div>
-            </section>
+              </section>
+            </div>
           </div>
         </PageLayout>
       </MainLayout>
     </>
   );
+}
+
+export async function getStaticProps({ preview = false }) {
+  const PostNewsAndEvent = await getPostByCategory("service");
+
+  const NodeNewsAndEvent = [];
+
+  PostNewsAndEvent.edges.map((p, index) => {
+    NodeNewsAndEvent.push(p.node);
+  });
+
+  return {
+    props: { NodeNewsAndEvent },
+  };
 }
