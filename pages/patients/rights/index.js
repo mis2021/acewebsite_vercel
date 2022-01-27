@@ -69,7 +69,7 @@ export default function PatientRight({nodePatRights}) {
 }
 
 
-export async function getStaticProps({ preview = false }) {
+export async function getServerSideProps({ preview = false }) {
     const PatientRights = await getPostByCategory("patient_rights");
   
     const nodePatRights = [];

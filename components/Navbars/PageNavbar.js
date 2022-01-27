@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import NavbarLinks from "./NavLinks";
 import DropdownMenu from "components/Dropdowns/DropdownMenu";
-import { aboutUsMenu, servicesFacilities, doctors, patients } from "constants/navbarmenu";
+import { aboutUsMenu, servicesFacilities, doctors, patients } from "../../constants/navbarMenu";
 import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 
 export default function PageNavbar(props) {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import NavbarLinks from "./NavLinks";
 import DropdownMenu from "components/Dropdowns/DropdownMenu";
 import IndexDropdown from "components/Dropdowns/IndexDropdown.js";
-import { aboutUsMenu, servicesFacilities, doctors, patients } from "constants/navbarmenu";
+import { aboutUsMenu, servicesFacilities, doctors, patients } from "../../constants/navbarMenu";
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
