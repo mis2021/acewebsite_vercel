@@ -8,6 +8,13 @@ import PageChange from "components/PageChange/PageChange.js";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "styles/tailwind.css";
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  useQuery,
+  gql
+} from "@apollo/client";
 
 Router.events.on("routeChangeStart", (url) => {
   document.body.classList.add("body-page-transition");
@@ -62,19 +69,26 @@ export default class MyApp extends App {
 
     const Layout = Component.layout || (({ children }) => <>{children}</>);
 
+    const client = new ApolloClient({
+      uri: 'https://admin.acemcbohol.ph/graphql',
+      cache: new InMemoryCache()
+    });
+
     return (
       <React.Fragment>
-        <Head>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
-          <title>ACEMC-BOHOL</title>
-          <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-        </Head>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <ApolloProvider client={client}>
+          <Head>
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            />
+            <title>ACEMC-BOHOL</title>
+            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+          </Head>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ApolloProvider>
       </React.Fragment>
     );
   }

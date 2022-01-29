@@ -121,7 +121,7 @@ export async function getServerSideProps({ preview = false }) {
     const PostGallery = await getPostByCategory("gallery")
     const PostInitialService = await getPostByCategory("initial_service_desc")
     const PostServices = await getPostByCategory("service")
-    const PostDoctors = await getPostByCategory("doctor")
+    const PostDoctors = await getPostByCategory("featured_doctor")
 
 
     const nodesAbout = []
