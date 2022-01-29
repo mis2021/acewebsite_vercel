@@ -1,10 +1,58 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PersonDesc from 'components/Contents/PersonDesc';
+import { AP_GET_POST_BY_CATEGORY, GET_CATEGORIES_BY_PARENT } from "lib/api";
+import { useMutation, useQuery } from '@apollo/client';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import CircularProgress from '@mui/material/CircularProgress';
+import _ from 'lodash';
+
 
 export default function DoctorSummary(props) {
-   
 
-    const doctors = props?.doctors || {}
+    const [doctorVar, setDoctorVar] = useState("featured_doctor")
+
+    const { loading, error, data:dataCat } = useQuery(GET_CATEGORIES_BY_PARENT, {
+        variables: {
+            name: "doctor"
+        }
+    });
+
+    const { loading: loadingPost, errorPost, data:dataPost, refetch } = useQuery(AP_GET_POST_BY_CATEGORY, {
+        variables: {
+            categoryName: doctorVar
+        }
+    });
+
+    const subcatfetch  = _.get(dataCat,"categories.edges[0].node.children.edges", [])
+    const postfetch  = _.get(dataPost,"posts.edges", [])
+
+    const allSubCats = []
+    subcatfetch.map((p, index) => {
+        allSubCats.push({
+            label: p.node?.description,
+            value: p.node?.name,
+            id: p.node?.id
+        })
+    })
+
+    const listDoctors = []
+    postfetch.map((p, index) => {
+        listDoctors.push(p.node)
+    })
+
+    const doctors = listDoctors
+
+    function getSelected(event, value){
+        
+        console.log("value", value.value)
+        setDoctorVar(value.value)
+
+        refetch()
+        
+
+    }
+ 
     return (
         <>
             <section className="relative py-20">
@@ -36,13 +84,21 @@ export default function DoctorSummary(props) {
                     <div className="flex flex-wrap justify-center text-center mb-24">
                         <div className="w-full lg:w-6/12 px-4">
                             <h2 className="text-4xl font-semibold">Our Doctors</h2>
-                            <p className="text-lg leading-relaxed m-4 text-blueGray-500">
-                                According to the National Oceanic and Atmospheric
-                                Administration, Ted, Scambos, NSIDClead scentist, puts the
-                                potentially record maximum.
-                            </p>
+                            <br/>
+                            <center>
+                                <Autocomplete
+                                    disablePortal
+                                    id="combo-box-demo"
+                                    options={allSubCats}
+                                    sx={{ width: 350 }}
+                                    renderInput={(params) => <TextField {...params} label="Specialization" />}
+                                    onChange={getSelected}
+                                />
+                            </center>
                         </div>
+
                     </div>
+                    <center>{loadingPost ? <CircularProgress /> : <></>}</center>
                     <div className="flex flex-wrap">
                         {
                             doctors.map((p, index) => (
