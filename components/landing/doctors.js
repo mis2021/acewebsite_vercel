@@ -82,8 +82,13 @@ export default function DoctorSummary(props) {
             <section className="pt-2 pb-48">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-wrap justify-center text-center mb-24">
-                        <div className="w-full lg:w-6/12 px-4">
+                        <div className="w-full lg:w-10/12 px-4">
                             <h2 className="text-4xl font-semibold">Our Doctors</h2>
+                            <br/>
+                            <center>
+                            Allied Care Experts Medical Center-Bohol believes that its primary function is to provide the highest quality patient care to all people regardless of race, color, gender, age or ability to pay and to assure the safety of our patients.
+Allied Care Experts Medical Center-Bohol is composed of established medical specialists specialize in caring for complex diseases and conditions. These certified medical specialists have gone through rigorous training and examinations which bring the standard of specialty care to their patients.
+                            </center>
                             <br/>
                             <center>
                                 <Autocomplete
