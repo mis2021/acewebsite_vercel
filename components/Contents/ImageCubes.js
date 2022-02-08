@@ -12,7 +12,7 @@ export default function ImageCubes(props) {
                     target="_blank"
 
                 >
-                    <div className="shadow-lg rounded-lg text-center  mt-8 " style={{ backgroundImage: `url(${props?.image})`, backgroundSize: '100%', height: '160px' }}>
+                    <div className="shadow-lg rounded-lg text-center  mt-8 " style={{ backgroundImage: `url(${props?.image})`, backgroundSize: '115%', height: '160px', backgroundRepeat: 'no-repeat' }}>
                         {/* <div className="bg-red-600 shadow-lg rounded-lg text-center p-8" style={{backgroundImage: props?.image  }}> */}
                         {/* <div style={{ backgroundImage: `url(${props?.image})`, backgroundSize: '100%', width: '100%' }}> */}
                         {/* <img
