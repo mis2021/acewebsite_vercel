@@ -4,9 +4,11 @@ import NavbarLinks from "./NavLinks";
 import DropdownMenu from "components/Dropdowns/DropdownMenu";
 import { aboutUsMenu, servicesFacilities, doctors, patients } from "../../constants/navbarMenu";
 import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
+import { AllMenu } from "../../constants/navbarMenu";
 
 export default function PageNavbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  
 
   return (
     <>
@@ -38,12 +40,22 @@ export default function PageNavbar(props) {
             }
             id="example-navbar-warning"
           >
-
-            <NavbarLinks title="About" icon="fas fa-hospital-alt" link={'/about'} />
+           
+            {
+              AllMenu.map((e) => (
+                <>
+                  {
+                    e?.subContent.length >= 0 ? <><NavbarLinks title={e.title} icon={e.icon} link={e.path} /></> :
+                      <><DropdownMenu title={e.title} icon={e.icon} menus={e.subContent} /></>
+                  }
+                </>
+              ))
+            }
+            {/* <NavbarLinks title="About" icon="fas fa-hospital-alt" link={'/about'} />
             <NavbarLinks title="Services" icon="fas fa-newspaper" link={'/services'} />
             <NavbarLinks title="Doctors" icon="fas fa-newspaper" link={'/doctors'} />
             <DropdownMenu title="Patients and Visitors Guide" icon="fas fa-hospital-user" menus={patients} />
-            <NavbarLinks title="News and Events" icon="fas fa-newspaper" link={'/news-events'}/>
+            <NavbarLinks title="News and Events" icon="fas fa-newspaper" link={'/news-events'}/> */}
 
 
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
