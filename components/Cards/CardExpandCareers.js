@@ -58,13 +58,17 @@ export default function CardExpand(props) {
 //         return "{ maxWidth: 975, width:800, marginTop: '20px', maxHeight: 450, height: 400 }";
 //     }
 // }
+  console.log("Mobile? - "+isMobile);
   return (
-    <Card sx={ 
-        isBrowser? { maxWidth: 860, width:800, marginTop: '20px', maxHeight: 450, height: 400 }:
-        { maxWidth: 860, width:800, marginTop: '20px', maxHeight: 450, height: 400 }
-        // { maxWidth: 860, width:800, marginTop: '20px', maxHeight: 450, height: 400 }
-        } style={{marginTop:20},{alignItems:'center'}}>
-            
+    <center>
+    <Card sx={
+        // isBrowser? { maxWidth: 860, width:800, marginTop: '20px', maxHeight: 450, height: 400 }:
+        // { maxWidth: 480, width: 400, marginTop: '20px', maxHeight: 650, height: '90%' }
+        // isMobile?{ maxWidth: 460, width:340, marginTop: '20px', maxHeight: 450, height: 400 }:
+        // { maxWidth: 860, width:800, maginTop: '20px', maxHeight: 450, height: 400 }
+        { maxWidth:800, width:'70vw',textAlign:'center', marginLeft:'-18vw', marginRight:'-18vw', maxHeight: 570, height: '90%',justifyContent:'center'}
+        }>
+          
       <CardHeader
         // avatar={
         //   props.icon ?
@@ -113,5 +117,6 @@ export default function CardExpand(props) {
         }
       </CardActions> */}
     </Card>
+    </center>
   );
 }

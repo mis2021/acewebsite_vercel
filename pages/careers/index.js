@@ -1,64 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import MainLayout from "components/Layouts/MainLayout";
-import PageLayout from "components/Layouts/PageLayout";
 import CardExpand from "components/Cards/CardExpandCareers";
 import { getPostByCategory } from "lib/api";
-import PageHeaderDesign from "components/Layouts/PageHeaderDesignPolygon";
+import PageHeaderLayout from "components/Layouts/PageHeaderLayout";
+export default function VMGC(props) {
+ 
 
-
-
-
-export default function Careers(props) {
   const careers = props?.NodeNewsAndEvent;
 
-  const pageTitle = 'Allied Care Experts CAREERS';
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+  
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
+  function onDocumentChange(type) {
+    if (pageNumber <= numPages) {
+      setPageNumber(type == "prev" ? pageNumber - 1 : pageNumber + 1);
+    }
+  }
 
-  console.log(careers)
 
   return (
     <>
-      <MainLayout>
-        {/* <PagehaderLayoutv2 image={careers}/>
-        <PageheaderLayoutCareers image={careers} /> */}
-
-        <PageHeaderDesign title={"OUR CAREERS"}/>
-        
-        <div className=" bg-blueGray-200  mr-auto ml-auto -mt-12">
-          {/* <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg "> */}
-          <div className=" sec-padding">
-            <section className=" pb-0 relative ">
-              {/* <div className="container px-4 mx-auto"> */}
-              <div className="container  mx-auto">
-                <div className="flex flex-wrap" style={{display:'flex', justifyContent:'center' }}>
-                  <center>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <div style={{fontSize:'30px',padding:'140px',fontWeight:'bold'}}>
-                      <p>FOR THE INTERESTED APPLICANTS</p>
-                      <br/>
-                      <p>You may email your resume to hr@acemcbohol.com or you may personally submit it to our office at 8th floor HR Department ACE Medical Center-Bohol 0368 AS Bioco St., Carlos P. Garcia East Avenue, Mansasa District, Tagbilaran City, Bohol 6300.</p>
-                    </div>
-                    
-                  {careers.map((p, index) => (
-                    <div className="w-1/3 px-4" style={{width:'100%',padding:'40px'}}>
-                      <CardExpand
-                        // image={p?.featuredImage?.node?.sourceUrl}
-                        title={p.title}
-                        // description={p.excerpt}
-                        content={p?.content}
-                        // icon={p?.image?.iconimage?.sourceUrl}
-                      />
-                    </div>
-                  ))}
-                  </center>
-                </div>
+      <MainLayout type="index">
+        <PageHeaderLayout title="THE CAREERS" />
+        <section className="pb-10 bg-blueGray-200 -mt-24">
+          <div className="">
+            <div className="flex flex-wrap items-center mt-10">
+              <div className="w-full md:w-5/10 px-4 mr-auto ml-auto" style={{padding:'8vw',width:'80%'}}>
+                <h3 className="text-3xl mb-2 font-semibold leading-normal">
+                  <br/>
+                FOR THE INTERESTED APPLICANTS
+                </h3>
+                <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600" style={{ textAlign: 'justify' }}>
+                You may email your resume to hr@acemcbohol.com or you may personally submit it to our office at 8th floor HR Department ACE Medical Center-Bohol 0368 AS Bioco St., Carlos P. Garcia East Avenue, Mansasa District, Tagbilaran City, Bohol 6300.
+                </p>
               </div>
-            </section>
+
+            </div>
           </div>
-        </div>
-        <PageLayout>
-        </PageLayout>
+
+
+
+        </section>
+        <center>
+          <div className="w-full md:w-5/10 px-4 mr-auto ml-auto">
+        {careers.map((p, index) => (
+            <div style={{width:'90%',padding:'20px',justifyContent:'center'}}>
+                <CardExpand
+                  title={p.title}
+                  content={p?.content}
+                />
+              </div>
+             ))}
+            </div>
+          </center>
+        <br/>
+        <br/>
+        <br/>
       </MainLayout>
     </>
   );
