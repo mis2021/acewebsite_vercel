@@ -147,7 +147,8 @@ export const AllMenu = [
     {
         title: "Doctors",
         path: "/doctors",
-        icon: "fas fa-newspaper",
+        icon: "fas fa-user",
+        // icon: "fas fa-newspaper",
         subContent: []
     },
     {
@@ -249,7 +250,7 @@ export const AllMenu = [
     {
         title: "Careers",
         path: "/careers",
-        icon: "fas fa-newspaper",
+        icon: "fas fa-users",
         subContent: []
     }
 
