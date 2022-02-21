@@ -22,9 +22,11 @@ export default function PageHeaderDesign(props) {
                     <div className="items-center flex flex-wrap">
                         <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                             <div className="pr-12">
+                                <center>
                                 <h1 className="text-white font-semibold text-5xl">
                                   {props.title}
                                 </h1>
+                                </center>
                                 {/* <p className="mt-4 text-lg text-blueGray-200">
                                         In the heart island of Bohol, a new era of medical healthcare rises. Allied Care Experts (ACE) Medical Center – Bohol  <br />
                                         is a tertiary healthcare facility with an organized, systematic, cost-effective, <br />
