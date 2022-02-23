@@ -16,7 +16,7 @@ export default function LandingHeader(props) {
                                 Allied Care Experts Medical Center - Bohol
                             </h2>
                             <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                              <i>  "Always Caring with Excellence for Gods Glory"</i>
+                              <i>  "Always Caring with Excellence for God's Glory"</i>
                             </p>
                             {/* <div className="mt-12">
                                 <a
