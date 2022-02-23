@@ -8,7 +8,9 @@ export default function PageHeaderLayout(props) {
         <div
           className="absolute top-0 w-full h-full bg-center bg-cover"
           style={{
-            backgroundImage: "url(/img/pattern_nextjs.png)",
+            backgroundImage: `url(${props.image ? props.image : '/img/pattern_nextjs.png'})`,
+            backgroundSize: '100%'
+            // backgroundImage: "url(/img/pattern_nextjs.png)",
           }}
         >
           <span
