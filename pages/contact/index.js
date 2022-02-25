@@ -12,8 +12,6 @@ export default function ContactUs(props) {
   const careers = props?.NodeNewsAndEvent;
 
 
-  console.log(careers)
-
   return (
     <>
       <MainLayout>

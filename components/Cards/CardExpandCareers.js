@@ -58,7 +58,6 @@ export default function CardExpand(props) {
 //         return "{ maxWidth: 975, width:800, marginTop: '20px', maxHeight: 450, height: 400 }";
 //     }
 // }
-  console.log("Mobile? - "+isMobile);
   return (
     <center>
     <Card sx={
