@@ -8,7 +8,9 @@ import { AllMenu } from "../../constants/navbarMenu";
 
 export default function PageNavbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-  
+  const openRoute = (path) => {
+    window.open(path, '_self')
+  }
 
   return (
     <>
@@ -16,8 +18,8 @@ export default function PageNavbar(props) {
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between md:w-auto lg:static lg:block lg:justify-start mr-7">
             {/* <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start mr-7"> */}
-            <Link href="/">
-              <a className="text-white-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase" >
+            <Link href="">
+              <a   onClick={e => openRoute("/")} className="text-white-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase" >
                 ACEMC-BOHOL
               </a>
             </Link>
@@ -40,13 +42,17 @@ export default function PageNavbar(props) {
             }
             id="example-navbar-warning"
           >
-           
+
             {
               AllMenu.map((e) => (
                 <>
-                  {
+                  {/* {
                     e?.subContent.length >= 0 ? <><NavbarLinks title={e.title} icon={e.icon} link={e.path} /></> :
                       <><DropdownMenu title={e.title} icon={e.icon} menus={e.subContent} /></>
+                  } */}
+                  {
+                    e?.dropdown ? <><DropdownMenu title={e.title} icon={e.icon} menus={e.subContent} /></> :
+                      <><NavbarLinks title={e.title} icon={e.icon} link={e.path} /></>
                   }
                 </>
               ))
