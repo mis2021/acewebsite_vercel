@@ -1,6 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import { createPopper } from "@popperjs/core";
+const openRoute = (path) => {
+    window.open(path, '_self')
+}
 
 const DropdownMenu = (props) => {
     // dropdown props
@@ -17,7 +20,7 @@ const DropdownMenu = (props) => {
         setDropdownPopoverShow(false);
     };
     const menu = props.menus;
-   
+
     return (
         <>
             <div
@@ -64,13 +67,15 @@ const DropdownMenu = (props) => {
                             }
 
                             {m?.submenus.map((ms, sindex) => (
-                                <Link href={ms.link}>
+                                <Link href=''>
+                                    {/* <Link href={ms.link}> */}
 
 
                                     {
                                         ms.type == 'single' ?
                                             <a
-                                                href="#pablo"
+                                                onClick={e => openRoute(ms.link)}
+                                                href="#"
                                                 className={
                                                     "text-sm py-2 px-4  px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400"
                                                 }
@@ -79,7 +84,8 @@ const DropdownMenu = (props) => {
                                             </a>
                                             :
                                             <a
-                                                href="#pablo"
+                                                onClick={e => openRoute(ms.link)}
+                                                href="#"
                                                 className={
                                                     `text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700`
                                                 }

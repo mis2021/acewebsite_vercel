@@ -8,6 +8,10 @@ import { AllMenu } from "../../constants/navbarMenu";
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const openRoute = (path) => {
+    window.open(path, '_self')
+  }
+
 
   return (
     <>
@@ -15,8 +19,9 @@ export default function Navbar(props) {
       <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg nav-bg-green-grad shadow">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start mr-7">
-            <Link href="/">
+            <Link href="">
               <a
+              onClick={e => openRoute("/")} 
                 className="text-white-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
                 // className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
                 href="#"
@@ -43,10 +48,14 @@ export default function Navbar(props) {
             {
               AllMenu.map((e)=>(
                 <>
-                  {
+                  {/* {
                     e?.subContent.length >= 0 ? <><NavbarLinks title={e.title} icon={e.icon} link={e.path} /></> :
                     <><DropdownMenu title={e.title} icon={e.icon} menus={e.subContent} /></>
-                  }
+                  } */}
+                   {
+                    e?.dropdown ? <><DropdownMenu title={e.title} icon={e.icon} menus={e.subContent} /></> :
+                      <><NavbarLinks title={e.title} icon={e.icon} link={e.path} /></>
+                  } 
                 </>
               ))
             }

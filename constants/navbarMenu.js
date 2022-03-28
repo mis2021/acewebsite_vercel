@@ -136,20 +136,23 @@ export const AllMenu = [
         title: "About US",
         path: "/about",
         icon: "fas fa-hospital-alt",
-        subContent: []
+        subContent: [],
+        dropdown: false,
     },
     {
         title: "Services",
         path: "/services",
         icon: "fas fa-newspaper",
-        subContent: []
+        subContent: [],
+        dropdown: false,
     },
     {
         title: "Doctors",
         path: "/doctors",
         icon: "fas fa-user",
         // icon: "fas fa-newspaper",
-        subContent: []
+        subContent: [],
+        dropdown: false,
     },
     {
         title: "Patients and Visitors Guide",
@@ -239,19 +242,22 @@ export const AllMenu = [
                 ]
             }
         ],
-        icon: "fas fa-hospital-user"
+        icon: "fas fa-hospital-user",
+        dropdown: true,
     },
     {
         title: "News and Events",
         path: "/news-events",
         icon: "fas fa-newspaper",
-        subContent: []
+        subContent: [],
+        dropdown: false,
     },
     {
         title: "Careers",
         path: "/careers",
         icon: "fas fa-users",
-        subContent: []
+        subContent: [],
+        dropdown: false,
     }
 
 ]
