@@ -14,7 +14,7 @@ import Grid from '@mui/material/Grid';
 import Parser from "html-react-parser";
 
 export default function PreferredRoom(props) {
-
+   
 
     return (
         <>
@@ -28,12 +28,15 @@ export default function PreferredRoom(props) {
                                     <Grid item xs={6}>
 
                                         <Card sx={{ minWidth: 275 }}>
-                                            <CardContent style={{height: 370}} >
-                                                
-                                                <Typography variant="h5" component="div">
-                                                    {r.title}
-                                                </Typography>
-                                                <div style={{margin: "25px"}}>
+                                            <CardContent style={{ maxheight: 500, height: 470 }} >
+                                                <center>
+                                                    <div style={{ marginTop: "20px" }}>
+                                                        <Typography variant="h5" component="div">
+                                                            <b> {r.title}</b>
+                                                        </Typography>
+                                                    </div>
+                                                </center>
+                                                <div style={{ margin: "25px", marginLeft: "50px" }}>
                                                     <Typography variant="body2">
                                                         {Parser(r.content)}
                                                     </Typography>
@@ -69,7 +72,9 @@ export default function PreferredRoom(props) {
 
 export async function getServerSideProps({ preview = false }) {
 
-    const room = await getPostByCategory("patients_and_visitors_guide,preferred_room")
+    // const room = await getPostByCategory("patients_and_visitors_guide, preferred_room")
+    const room = await getPostByCategory("preferred_room")
+    // const room = await getPostByCategory("patients_and_visitors_guide,preferred_room")
 
     const nodeRoom = []
 
